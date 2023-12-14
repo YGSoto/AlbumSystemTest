@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- 讀取條 -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+        </div>
+        <!-- 登入前內容 -->
+        <div id="no_login">
+            <div class="logintop"></div>
+            
+
+            <div class="login">
+                <p class="logo">YGSoto</p>
+                <p id="Register"></p>
+                <form id="loginForm" onsubmit="registerUser(event)">
+                    <input id="l_email" class="userInput" type="email"  placeholder="UserID_Email" value="">
+                    <input id="l_pwd" class="userInput" type="password" minlength="8"  placeholder="UserPasswrod" value="">
+                    <input id="login_b"class="loginInput" type="submit" value="Login" onclick="Logintest(event)">
+                </form>
+                <p class="don">Don’t have an account?</p>
+                <div class="rebutton-con">
+                    <input class="rebutton" type="button" value="Register" onclick="goToPageLoader('2Register.html')">
+                    <input class="rebutton" type="button" value="Continue with Google">
+                </div>
+            </div>
+        </div>
+
+        <!-- 登入後內容 -->
+        <div id="ok_login">
+            
+            
+            <!--用戶資訊 登出-->
+            <div class="albumtop">
+                <p id="useremail" class="userid"></p>
+                <form class="f_logout">
+                    <input id="logout_b" class="logout" type="submit" value="Logout" onclick="Logout(event)">
+                </form>
+                
+            </div>
+            <!-- 上傳 -->
+            
+            
+            <!-- 相片 -->
+            <div>
+                <!-- 相簿 -->
+                <div id="album_menu">
+                    <!-- 新增相簿 -->
+                    <div class="create_album">
+                    
+                        <input id="open_create" class="open_create" type="button" value="建立相簿">
+                        <form id="albuminput_con" class="albuminput_con">
+                            <input id="albumname" class="albumname" type="text"  placeholder="請輸入相簿名稱">
+                            <input class="open_create" type="submit"  value="建立" onclick="createalbum(event)">
+                        </form>
+                    </div>
+                    <!-- 內容 -->
+                    <div class="album_con">
+                        <form class="album_open2" id="album_open">
+                            <input class="album_open" type="submit" value="相簿">
+                        </form>
+                        <form class="album_open2" id="album_open">
+                            <input class="album_open" type="submit" value="相簿">
+                        </form>
+                        <form class="album_open2" id="album_open">
+                            <input class="album_open" type="submit" value="相簿">
+                        </form>
+                        <form class="album_open2" id="album_open">
+                            <input class="album_open" type="submit" value="相簿">
+                        </form>
+                        <form class="album_open2" id="album_open">
+                            <input class="album_open" type="submit" value="相簿">
+                        </form>
+                    </div>
+                </div>
+                 <!-- 相片 -->
+                <div id="album" class="album_box">
+                        <div class="photoback">
+                            <input class="photoback_c" type="submit" value="返回" onclick="albumphotoclose(event)">
+                            <p id="album_text" class="album_text"></p>
+                        </div>
+                    <form class="upload_con">
+                        <input class="selectimg" type="file" accept="image/*" id="imageInput">
+                        <input class="uploadimg" type="submit" value="上傳" onclick="uploadimg(event)">
+                    </form>
+                    <div class="image-grid" id="userImageGrid">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </div>
+        <!-- 相片模塊 -->
+        <div class="image-modal">
+            <input id="downlaod" class="download" type="button" value="下載">
+            <input id="deleteimg" class="deleteimg" type="button" value="刪除">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content">
+        </div>
+
+
+        <script src="JavaScript.js"></script>
+    </body>
+
+</html>

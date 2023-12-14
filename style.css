@@ -1,0 +1,412 @@
+body {
+    font-size: 30px;
+    background-color: black;
+
+}
+/* 讀取 */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* 登入介面 */
+input{
+    font-family: 'Michroma';
+}
+.logintop{
+    height: 150px;
+    display: block;
+}
+
+.logo{
+    font-family: 'Michroma';
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+
+.login{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -50%;
+    display: block;
+}
+.userInput{
+    margin-left: auto;
+    font-size: 30px;
+    width: 700px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: 2px solid gray;
+    color:white;
+}
+
+.loginInput{
+    margin-left: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 707px;
+    height: 60px;
+    margin-top: 10px;
+    background-color: white;
+}
+.loginInput:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+
+.don{
+    font-family: 'Michroma';
+    margin-left: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 700px;
+    height: 60px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: black;
+}
+.rebutton-con {
+    text-align: center; /* 將按鈕置中 */
+  }
+.rebutton{
+    height: 60px;
+    background-color: white;
+    width: 340px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.rebutton:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+
+/* 註冊成功 */
+
+#Register{
+    display: none;
+    font-family: 'Michroma';
+    margin-left: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 700px;
+    height: 60px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+/* ================================= */
+/* 登入登出 */
+#ok_login{
+    display: none;
+}
+
+#no_login{
+    display: block;
+}
+
+.albumtop{
+    width: 100%;
+    height: 150px;
+    border:2px solid gray;
+}
+.userid{
+    font-family: 'Michroma';
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.f_logout{
+    text-align: center;
+}
+.logout{
+    height: 40px;
+    background-color: white;
+    width: 200px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.logout:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+/* ================================= */
+
+/* ================================= */
+/* ================================= */
+/* ================================= */
+/* 建立相簿 */
+.open_create{
+    height: 60px;
+    background-color: white;
+    width: 200px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.open_create:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+/* 展開 */
+.albuminput_con{
+    display: none;
+    font-family: 'Michroma';
+    flex-direction: column; /* 設置主軸方向為垂直方向 */
+    align-items: center; /* 子元素在交叉軸上居中對齊 */
+}
+.albumname{
+    font-size: 30px;
+    width: 700px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: 2px solid gray;
+    color:white;
+}
+.create_album{
+    font-family: 'Michroma';
+    display: flex;
+    flex-direction: column; /* 設置主軸方向為垂直方向 */
+    align-items: center; /* 子元素在交叉軸上居中對齊 */
+}
+
+
+/* ================================= */
+/* 相簿 */
+.album_open2{
+    width: calc(25% - 20px);
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.album_open{
+    height: 60px;
+    background-color: white;
+    width: 200px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.album_open:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+.album_con{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    
+}
+/* ================================= */
+.photoback{
+    display: flex;
+    flex-direction: column; /* 設置主軸方向為垂直方向 */
+    align-items: center; /* 子元素在交叉軸上居中對齊 */
+}
+.photoback_c{
+    height: 60px;
+    background-color: white;
+    width: 200px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.photoback_c:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+/* ================================= */
+/* 相片區塊隱藏顯示 */
+.album_box{
+    display: none;
+}
+/* 相簿標題 */
+.album_text{
+    font-family: 'Michroma';
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+/* 上傳圖片 */
+.upload_con{
+    display: flex;
+    flex-direction: column; /* 設置主軸方向為垂直方向 */
+    align-items: center; /* 子元素在交叉軸上居中對齊 */
+}
+.uploadimg{
+    height: 60px;
+    background-color: white;
+    width: 340px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.uploadimg:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+.selectimg{
+    margin-top: 20px;
+    width: 63px;
+    margin-bottom: 10px;
+}
+/* ================================= */
+
+/* 下載圖片 */
+.download{
+    position: fixed;
+    top: 2%;
+    font-family: 'Michroma';
+    height: 70px;
+    background-color: white;
+    width: 300px;
+    margin-left: 5px;
+    font-size: 30px;
+    right: 20%;
+}
+.download:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+/* 刪除傳圖片 */
+
+.deleteimg{
+    position: fixed;
+    top: 2%;
+    font-family: 'Michroma';
+    height: 70px;
+    background-color: white;
+    width: 300px;
+    margin-left: 5px;
+    font-size: 30px;
+    left: 20%;
+}
+.deleteimg:hover{
+    transition: background-color 0.3s ease;
+    background-color: rgb(206, 206, 206);
+}
+/* 定義圖片網格的外觀 */
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* 定義每個圖片的樣式 */
+  .image-item {
+    width: calc(25% - 20px);
+    height: 250px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* 設定圖片的大小和過渡效果 */
+  .image-item img {
+    width: 100%;
+    height: 100%;
+    /* 圖片填滿方格 */
+    object-fit: cover; 
+    transition: transform 0.3s;
+    border:2px solid rgb(133, 133, 133);
+  }
+  .image-item img:hover{
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px 2px rgb(196, 196, 196);
+  }
+  
+  /* 定義圖片模態框的樣式 */
+  .image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  /* 設定模態框中內容的大小和位置 */
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* 定義關閉按鈕的樣式 */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 140px;
+    color: white;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 140px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+  }
+  /* 定義關閉按鈕的樣式 */
+  .prev-btn {
+    position: absolute;
+    left: 15px;
+    font-size: 140px;
+    color: white;
+    cursor: pointer;
+  }
+  .prev-btn:hover {
+    color: rgb(100, 100, 100);
+  }
+  .next-btn {
+    position: absolute;
+    right: 15px;
+    font-size: 140px;
+    color: white;
+    cursor: pointer;
+  }
+  .next-btn:hover {
+    color: rgb(100, 100, 100);
+  }

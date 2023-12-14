@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- 讀取條 -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+        </div>
+        <!-- 內容 -->
+        <div class="logintop"></div>
+        <div class="login">
+            <p class="logo">YGSoto</p>
+            <p class="don">Register User</p>
+            <form id='registerForm'method="post" onsubmit="registerUser(event)">
+                <input id="r_email" class="userInput" type="email"  placeholder="Email" name="email" required>
+                <input id="r_pwd" class="userInput" type="password" minlength="8"  placeholder="UserPasswrod" name="password" required>
+                <div class="rebutton-con">
+                    <input class="rebutton" type="submit" value="Confirm" onclick="registerUser(event)">
+                    <input class="rebutton" type="button" value="Back" onclick="goToPageLoader('1Login.html')">
+                </div>
+            </form>
+        <p id="Register"></p>
+        </div>
+        
+        <script src="JavaScript.js"></script>
+    </body>
+
+</html>
